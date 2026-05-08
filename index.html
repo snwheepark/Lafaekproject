@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Timor-Leste Economy — Snapshot · The Lafaek Project</title>
+  <meta name="description" content="An interactive economic platform on Timor-Leste — GDP, oil and gas, agriculture, trade, demographics, and history. Built as a public diplomacy and economic education resource." />
+  <meta property="og:title" content="Timor-Leste Economy — Lafaek Project" />
+  <meta property="og:description" content="An interactive, embassy-grade economic platform on Timor-Leste." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/typography.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/flag-tl.svg" />
+</head>
+<body data-page="snapshot">
+
+  <header class="nav" role="banner">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html" aria-label="Timor-Leste Economy — home">
+        <img src="assets/flag-tl.svg" alt="" />
+        <span>Timor-Leste Economy</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a data-page="snapshot"    href="index.html">Snapshot</a></li>
+          <li><a data-page="gdp"         href="gdp.html">GDP</a></li>
+          <li><a data-page="oil"         href="oil.html">Oil &amp; Gas</a></li>
+          <li><a data-page="agriculture" href="agriculture.html">Agriculture</a></li>
+          <li><a data-page="trade"       href="trade.html">Trade</a></li>
+          <li><a data-page="people"      href="people.html">People</a></li>
+          <li><a data-page="history"     href="history.html">History</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="M1 1h16M1 7h16M1 13h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero" id="snapshot" aria-labelledby="hero-title">
+      <div class="container">
+
+        <div class="hero-eyebrow-row reveal">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="text">The Lafaek Project · Public Economic Platform</span>
+        </div>
+
+        <h1 id="hero-title" class="display reveal">
+          One of the world's youngest nations — and one of its most fascinating economies.
+        </h1>
+
+        <p class="lead reveal">
+          Timor-Leste gained independence in 2002. It sits on billions in oil wealth.
+          Yet nearly half its population lives in poverty. This platform tells that
+          story — with real data, in plain language.
+        </p>
+
+        <div class="metric-grid cols-4 stagger" aria-label="Country snapshot">
+          <article class="metric-card accent">
+            <div class="label">GDP (2024)</div>
+            <div class="value mono-num">
+              <span class="counter" data-target="1.88" data-decimals="2" data-prefix="$" data-suffix="B">$0.00B</span>
+            </div>
+            <div class="sub">Nominal, World Bank</div>
+          </article>
+          <article class="metric-card">
+            <div class="label">GDP Growth</div>
+            <div class="value mono-num">
+              <span class="counter" data-target="4.1" data-decimals="1" data-suffix="%">0.0%</span>
+            </div>
+            <div class="sub">2024, IMF Article IV</div>
+          </article>
+          <article class="metric-card">
+            <div class="label">Population</div>
+            <div class="value mono-num">
+              <span class="counter" data-target="1.4" data-decimals="1" data-suffix="M">0.0M</span>
+            </div>
+            <div class="sub">2024 estimate</div>
+          </article>
+          <article class="metric-card">
+            <div class="label">Petroleum Fund</div>
+            <div class="value mono-num">
+              <span class="counter" data-target="18.95" data-decimals="2" data-prefix="$" data-suffix="B">$0.00B</span>
+            </div>
+            <div class="sub">Sovereign wealth fund</div>
+          </article>
+        </div>
+
+        <div class="hero-map-wrap reveal" aria-label="Map of Southeast Asia highlighting Timor-Leste and key trade partners">
+          <div class="map-header">
+            <h3>Timor-Leste in Southeast Asia — and its key economic partners</h3>
+            <div class="legend">
+              <span><span class="legend-dot" style="background:#DC241F"></span>Timor-Leste</span>
+              <span><span class="legend-dot" style="background:#185fa5"></span>Trade &amp; investment partners</span>
+            </div>
+          </div>
+          <svg id="world-map" role="img" aria-label="Mercator projection of Southeast Asia with Timor-Leste highlighted in red and major regional economic partners marked"></svg>
+        </div>
+
+        <p class="source">Default view: Southeast Asia. Portugal (cultural &amp; EU partner) sits outside this frame. Data: World Bank 2024, IMF 2024.</p>
+
+        <!-- Section explorer cards -->
+        <div class="section-head reveal" style="margin-top: 4.5rem;">
+          <span class="eyebrow"><span class="num">→</span> Explore the platform</span>
+          <h2 style="font-size: clamp(1.4rem, 2.4vw, 2rem);">Six themed briefings</h2>
+        </div>
+        <div class="insight-grid stagger" style="grid-template-columns: repeat(3, minmax(0,1fr));">
+          <a class="insight-card" href="gdp.html">
+            <span class="num-tag">01 · GDP</span>
+            <h4>Macroeconomic overview</h4>
+            <p>Growth, GDP per capita, HDI, ASEAN accession — the economy at a glance.</p>
+          </a>
+          <a class="insight-card" href="oil.html">
+            <span class="num-tag">02 · Oil &amp; Gas</span>
+            <h4>The Petroleum Fund</h4>
+            <p>$18.95B sovereign wealth, Bayu-Undan's end, and the Greater Sunrise question.</p>
+          </a>
+          <a class="insight-card" href="agriculture.html">
+            <span class="num-tag">03 · Agriculture</span>
+            <h4>Where most people work</h4>
+            <p>Coffee, fisheries, and 66% of families dependent on the land.</p>
+          </a>
+          <a class="insight-card" href="trade.html">
+            <span class="num-tag">04 · Trade</span>
+            <h4>ASEAN &amp; partners</h4>
+            <p>Australia, Indonesia, China, Portugal, Japan — and a new seat at the table.</p>
+          </a>
+          <a class="insight-card" href="people.html">
+            <span class="num-tag">05 · People</span>
+            <h4>The youth dividend</h4>
+            <p>Poverty, stunting, electrification, and the under-30 majority.</p>
+          </a>
+          <a class="insight-card" href="history.html">
+            <span class="num-tag">06 · History</span>
+            <h4>Occupation to independence</h4>
+            <p>1975 to today — the events that shaped the modern economy.</p>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-row">
+            <img src="assets/flag-tl.svg" alt="" />
+            <span>Timor-Leste Economy Platform</span>
+          </div>
+          <p class="tagline">Built as an open public resource to make Timor-Leste's economic story accessible to everyone.</p>
+          <p class="small" style="color: var(--ink-soft); margin: 0;">Research &amp; concept: Sam — University of Pennsylvania (Wharton &amp; CAS).</p>
+        </div>
+        <div class="sources">
+          <strong>Data sources</strong><br/>
+          World Bank 2024 · IMF Article IV 2024 · BTI 2026 · East Asia Forum · GIS Reports · Heinrich Böll Foundation · EITI · UNICEF · Australian DFAT
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>The Lafaek Project · <span data-year>2026</span> · Data last verified: May 2026</span>
+        <span>Made for public diplomacy &amp; economic education.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3" defer></script>
+  <script src="scripts/animations.js" defer></script>
+  <script src="scripts/charts.js" defer></script>
+  <script src="scripts/map.js" defer></script>
+
+</body>
+</html>
